@@ -10,10 +10,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
-    </div>
         <asp:Label ID="lblCodigoPostal" runat="server" Text="Código Postal:"></asp:Label>
-        <asp:TextBox ID="txbCodigoPostal" runat="server" style="margin-left: 35px"></asp:TextBox>
+        <asp:TextBox ID="txbCodigoPostal" runat="server" style="margin-left: 35px" CssClass="codigoPostal"></asp:TextBox>
         <asp:Button ID="btnBuscar" runat="server" style="margin-left: 29px" Text="Buscar" />
         <asp:RadioButtonList ID="rblTiendas" runat="server" AutoPostBack="True" DataSourceID="sqlDsTiendas" DataTextField="valor" DataValueField="idTienda">
         </asp:RadioButtonList>
@@ -23,6 +21,8 @@
                 <asp:Parameter Name="cPostal2" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>
+    </div>
+        
     </form>
 </body>
 </html>

@@ -19,7 +19,7 @@ Partial Class inicio
 
     Protected Sub rblTiendas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles rblTiendas.SelectedIndexChanged
         Dim nombreTienda = rblTiendas.SelectedItem.Text
-        MsgBox("nombre => " & nombreTienda)
+        Session("Tienda") = nombreTienda
         Response.Redirect("Tienda.aspx")
     End Sub
 End Class
