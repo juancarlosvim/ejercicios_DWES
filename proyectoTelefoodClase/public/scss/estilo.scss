@@ -1,0 +1,31 @@
+﻿//variables
+$fondo_header: #FAAF33;
+$fondo_pizza: #2C2838;
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* end reset */
+header{
+    background: #FAAF33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section{
+    margin-top: 1em;
+    text-align: center;
+    
+    #rblTiendas{
+        margin-top: 2em; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #btnBuscar{
+        width: 10%;
+        min-height: 3em;
+        border-radius: 30%;
+    }     
+}

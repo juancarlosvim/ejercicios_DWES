@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Tienda.aspx.vb" Inherits="Tienda" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="tienda.aspx.vb" Inherits="Tienda" %>
 
 <!DOCTYPE html>
 
