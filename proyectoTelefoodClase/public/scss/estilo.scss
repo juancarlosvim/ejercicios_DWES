@@ -1,6 +1,7 @@
 ﻿//variables
 $fondo_header: #FAAF33;
 $fondo_pizza: #2C2838;
+$fondo_footer: #3E454E;
 /* reset */
 *{
     margin: 0;
@@ -9,23 +10,57 @@ $fondo_pizza: #2C2838;
 }
 /* end reset */
 header{
-    background: #FAAF33;
+    background: $fondo_header;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 section{
     margin-top: 1em;
-    text-align: center;
-    
+    margin-bottom: 1em;
+   
+    min-height: 23em;
+    /* page inicio*/
+    .buscarTienda{
+        text-align: center;
+    }
     #rblTiendas{
-        margin-top: 2em; 
         margin-left: auto;
         margin-right: auto;
+        border: 0.2em dotted black;
+        padding: 1em;     
     }
+    .tiendas{
+        margin-top: 1em; 
+    }
+    
     #btnBuscar{
         width: 10%;
         min-height: 3em;
         border-radius: 30%;
-    }     
+    }   
+    /* end page inicio */
+
+    /* page tiendas */
+    #lblTiendas{
+        
+    }
+    
+    .categorias{
+        
+    }
+    /* end page */
+    
+}
+footer{
+
+    background-color: $fondo_footer;
+    min-height: 3em;
+    .logoFooter{
+        img{
+            width: 10%;
+        }
+    }
+    
 }

@@ -19,32 +19,32 @@
         </div>
     </header>
     <section>
-            <form id="form1" runat="server">
-                    <div class="nombreTiendas">
-                        <asp:Label ID="lblCodigoPostal" runat="server" Text="Código Postal:"></asp:Label>
-                        <asp:TextBox ID="txbCodigoPostal" runat="server"  CssClass="codigoPostal"></asp:TextBox>
-                        <asp:Button ID="btnBuscar" runat="server"  Text="Buscar" />
-                        <asp:RadioButtonList ID="rblTiendas" runat="server" AutoPostBack="True" DataSourceID="sqlDsTiendas" DataTextField="valor" DataValueField="idTienda">
-                        </asp:RadioButtonList>
-                        <asp:SqlDataSource ID="sqlDsTiendas" runat="server" ConnectionString="<%$ ConnectionStrings:TelefoodConnectionString %>" SelectCommand="SELECT [idTienda], ([domicilio]+' '+[poblacion]+' '+[provincia]+' '+[cPostal]+' '+[telefono]) as valor FROM [Tiendas] WHERE ([cPostal] = @cPostal) UNION all SELECT [idTienda], ([domicilio]+' '+[poblacion]+' '+[provincia]+' '+[cPostal]+' '+[telefono]) as valor FROM [Tiendas] WHERE ([cPostal] LIKE @cPostal2 + '%') and not ([cPostal] = @cPostal)">
-                            <SelectParameters>
-                                <asp:ControlParameter ControlID="txbCodigoPostal" Name="cPostal" PropertyName="Text" Type="String" />
-                                <asp:Parameter Name="cPostal2" Type="String" />
-                            </SelectParameters>
-                        </asp:SqlDataSource>
-                    </div>
+            <div class="buscarTienda">
+                    <form id="form1" runat="server">
+                            <div class="nombreTiendas">
+                                <asp:Label ID="lblCodigoPostal" runat="server" Text="Código Postal:"></asp:Label>
+                                <asp:TextBox ID="txbCodigoPostal" runat="server"  CssClass="codigoPostal"></asp:TextBox>
+                                <asp:Button ID="btnBuscar" runat="server"  Text="Buscar" />
+                                <div class="tiendas">
+                                    <asp:RadioButtonList ID="rblTiendas" runat="server" AutoPostBack="True" DataSourceID="sqlDsTiendas" DataTextField="valor" DataValueField="idTienda">
+                                </asp:RadioButtonList>
+                                </div>
+                                
+                                <asp:SqlDataSource ID="sqlDsTiendas" runat="server" ConnectionString="<%$ ConnectionStrings:TelefoodConnectionString %>" SelectCommand="SELECT [idTienda], ([domicilio]+' '+[poblacion]+' '+[provincia]+' '+[cPostal]+' '+[telefono]) as valor FROM [Tiendas] WHERE ([cPostal] = @cPostal) UNION all SELECT [idTienda], ([domicilio]+' '+[poblacion]+' '+[provincia]+' '+[cPostal]+' '+[telefono]) as valor FROM [Tiendas] WHERE ([cPostal] LIKE @cPostal2 + '%') and not ([cPostal] = @cPostal)">
+                                    <SelectParameters>
+                                        <asp:ControlParameter ControlID="txbCodigoPostal" Name="cPostal" PropertyName="Text" Type="String" />
+                                        <asp:Parameter Name="cPostal2" Type="String" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+                            </div>
+            </div>
+          
     </section>
 
     <footer>
 
-        <div class="social">
-            <div class="nombre">
-                <h2>Pizza</h2>
-            </div>
-
-            <div class="social">
-
-            </div>
+        <div class="logoFooter">
+            
         </div>
 
     </footer>
