@@ -24,7 +24,7 @@ Partial Class _Default
     End Sub
     Private Sub sqlDsCliente_Updating(sender As Object, e As SqlDataSourceCommandEventArgs) Handles sqlDsCliente.Updating
         Dim avatar = CType(fvCliente.FindControl("fuAvatar"), FileUpload)
-        If avatar.HasFile Then
+        If avatar.HasFile And avatar.PostedFile.ContentLength <= 102400 And avatar.PostedFile.FileName.ToUpper.EndsWith("GIF") Or avatar.PostedFile.FileName.ToUpper.EndsWith("JPG") Or avatar.PostedFile.FileName.ToUpper.EndsWith("PNG") Then
             e.Command.Parameters("@avatar").Value = avatar.FileBytes  ' cargar el parametro
         Else
             Dim s As New SqlParameter With {.SqlDbType = Data.SqlDbType.Image, .Value = DBNull.Value}
