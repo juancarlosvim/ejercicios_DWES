@@ -2,7 +2,7 @@
 $fondo_header: #FAAF33;
 $fondo_pizza: #2C2838;
 $fondo_footer: #3E454E;
-$fondo_botones: #5C5857;
+$fondo_botones: #4E5468;
 
 /* reset */
 *{
@@ -22,11 +22,12 @@ header{
     }
     
     .categorias{
+        
         input{
             background-color: $fondo_botones;
             color: $fondo_header;
             border-radius: 50%; 
-            padding: 1em;
+            padding: 1.2em;
         }
         input:hover{
             transition: 0.5s;
