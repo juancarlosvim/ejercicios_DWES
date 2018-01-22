@@ -11,6 +11,21 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* page tiendas */
+  /* end page */
+}
+
+header .categorias input {
+  background-color: #5C5857;
+  color: #FAAF33;
+  border-radius: 50%;
+  padding: 1em;
+}
+
+header .categorias input:hover {
+  transition: 0.5s;
+  color: #5C5857;
+  background-color: #FAAF33;
 }
 
 section {
@@ -19,8 +34,6 @@ section {
   min-height: 23em;
   /* page inicio*/
   /* end page inicio */
-  /* page tiendas */
-  /* end page */
 }
 
 section .buscarTienda {

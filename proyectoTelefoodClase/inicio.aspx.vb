@@ -18,8 +18,9 @@ Partial Class inicio
 
 
     Protected Sub rblTiendas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles rblTiendas.SelectedIndexChanged
-        Dim nombreTienda = rblTiendas.SelectedItem.Text
-        Session("tienda") = nombreTienda
+        Session("pedido") = New Dictionary(Of Int32, DetallePedido)
+        Session("tienda") = rblTiendas.SelectedValue
+        Session("ubicacion") = rblTiendas.SelectedItem.ToString
         Response.Redirect("tienda.aspx")
     End Sub
     Protected Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click

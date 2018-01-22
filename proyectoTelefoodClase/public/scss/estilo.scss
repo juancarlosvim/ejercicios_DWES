@@ -2,6 +2,8 @@
 $fondo_header: #FAAF33;
 $fondo_pizza: #2C2838;
 $fondo_footer: #3E454E;
+$fondo_botones: #5C5857;
+
 /* reset */
 *{
     margin: 0;
@@ -14,6 +16,25 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* page tiendas */
+    #lblTiendas{
+        
+    }
+    
+    .categorias{
+        input{
+            background-color: $fondo_botones;
+            color: $fondo_header;
+            border-radius: 50%; 
+            padding: 1em;
+        }
+        input:hover{
+            transition: 0.5s;
+            color: $fondo_botones;
+            background-color: $fondo_header;
+        }
+    }
+    /* end page */
     
 }
 section{
@@ -42,15 +63,6 @@ section{
     }   
     /* end page inicio */
 
-    /* page tiendas */
-    #lblTiendas{
-        
-    }
-    
-    .categorias{
-        
-    }
-    /* end page */
     
 }
 footer{
