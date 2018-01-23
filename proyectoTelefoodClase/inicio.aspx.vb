@@ -18,7 +18,7 @@ Partial Class inicio
 
 
     Protected Sub rblTiendas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles rblTiendas.SelectedIndexChanged
-        Session("pedido") = New Dictionary(Of Int32, DetallePedido)
+        Session("pedido") = New Dictionary(Of Integer, DetallePedido)
         Session("tienda") = rblTiendas.SelectedValue
         Session("ubicacion") = rblTiendas.SelectedItem.ToString
         Response.Redirect("tienda.aspx")

@@ -28,6 +28,11 @@ header .categorias input:hover {
   background-color: #FAAF33;
 }
 
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
 section {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -49,6 +54,11 @@ section #rblTiendas {
 
 section .tiendas {
   margin-top: 1em;
+}
+
+section .productos {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 section #btnBuscar {
