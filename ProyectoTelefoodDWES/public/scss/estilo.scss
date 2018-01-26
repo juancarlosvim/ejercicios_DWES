@@ -1,0 +1,68 @@
+@import 'variables';
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* end reset */
+header{
+    background: $fondo_header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    
+}
+section{
+    margin-top: 1em;
+    margin-bottom: 1em;
+   
+    min-height: 23em;
+    /* page inicio*/
+    .buscarTienda{
+       
+        text-align: center;
+        
+    }
+    #rbTiendas{
+        margin-left: auto;
+        margin-right: auto;
+        border: 0.2em dotted black;
+        padding: 1em;     
+    }
+    .tiendas{
+        margin-top: 1em; 
+    }
+    .nombreTienda{
+        margin: 1em;
+    }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #btnBuscar{
+        width: 10%;
+        min-height: 3em;
+        border-radius: 30%;
+    }   
+    /* end page inicio */
+
+    
+}
+footer{
+
+    background-color: $fondo_footer;
+    min-height: 3em;
+    p{
+        color: $color_blanco;
+        padding: 1em;
+        line-height: 3em;
+    }
+    
+    
+}

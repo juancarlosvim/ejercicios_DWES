@@ -1,0 +1,82 @@
+@import 'variables';
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: $fondo_header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .categorias{
+        
+        input{
+            background-color: $fondo_botones;
+            color: $fondo_header;
+            border-radius: 50%; 
+            padding: 1.2em;
+        }
+        input:hover{
+            transition: 0.5s;
+            color: $fondo_botones;
+            background-color: $fondo_header;
+        }
+    }    
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    
+}
+section{
+    flex:  1 100%;
+    background-color: red;
+    
+    /*#lvProductos_groupPlaceholderContainer td{
+        border: 1px solid black;
+    }*/
+  
+   .producto{
+      text-align: center;
+       border: 1px dotted black;
+       width: 40%;
+       
+        padding: 1em;
+       
+       p{
+           padding: 0.2em;
+       }
+       
+       
+        input[type=number]{
+           
+            padding: 0.2em;
+            width: 20%;   
+        }
+        input[type=submit]{
+            padding: 1em;
+            border-radius: 50%;
+        }
+   }
+    
+}
+aside{
+    background-color: yellow;
+   
+}
+
+
+footer{
+
+    background-color: $fondo_footer;
+    min-height: 3em;
+    p{
+        color: $color_blanco;
+        padding: 1em;
+        line-height: 3em;
+    }
+    
+    
+}
