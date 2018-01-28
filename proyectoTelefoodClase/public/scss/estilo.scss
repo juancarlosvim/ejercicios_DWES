@@ -4,15 +4,17 @@ $fondo_pizza: #2C2838;
 $fondo_footer: #3E454E;
 $fondo_botones: #4E5468;
 
+
 /* reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 /* end reset */
 header{
-    background: $fondo_header;
+   background-color: $fondo_header;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +66,18 @@ section{
     }   
     /* end page inicio */
 
-    
+    /* div productos */
+    .productos{
+        width: 50%;
+        
+    }
+    .productoPrincipal{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    /* end div productos*/
 }
 footer{
 

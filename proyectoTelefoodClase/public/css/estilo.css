@@ -7,7 +7,7 @@
 
 /* end reset */
 header {
-  background: #FAAF33;
+  background-color: #FAAF33;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,6 +34,8 @@ section {
   min-height: 23em;
   /* page inicio*/
   /* end page inicio */
+  /* div productos */
+  /* end div productos*/
 }
 
 section .buscarTienda {
@@ -55,6 +57,16 @@ section #btnBuscar {
   width: 10%;
   min-height: 3em;
   border-radius: 30%;
+}
+
+section .productos {
+  width: 50%;
+}
+
+section .productoPrincipal {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 footer {
