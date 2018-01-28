@@ -13,11 +13,14 @@ header {
   align-items: center;
 }
 
+<<<<<<< HEAD
 header h1 {
   color: #222629;
   padding: 1em;
 }
 
+=======
+>>>>>>> master
 main {
   display: flex;
   justify-content: space-between;
@@ -35,6 +38,7 @@ section .buscarTienda {
   text-align: center;
 }
 
+<<<<<<< HEAD
 section .nombreTienda {
   margin: 1em;
   margin-left: auto;
@@ -50,6 +54,26 @@ section .nombreTienda input[type=radio] {
 
 section .nombreTienda p {
   margin: 0.67em;
+=======
+section #rbTiendas {
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.2em dotted black;
+  padding: 1em;
+}
+
+section .tiendas {
+  margin-top: 1em;
+}
+
+section .nombreTienda {
+  margin: 1em;
+}
+
+section .productos {
+  display: flex;
+  flex-wrap: wrap;
+>>>>>>> master
 }
 
 section #btnBuscar {
@@ -61,6 +85,7 @@ section #btnBuscar {
 footer {
   background-color: #3E454E;
   min-height: 3em;
+<<<<<<< HEAD
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,5 +133,13 @@ footer .social a:hover {
     display: flex;
     flex-direction: column;
   }
+=======
+}
+
+footer p {
+  color: #FFFFFF;
+  padding: 1em;
+  line-height: 3em;
+>>>>>>> master
 }
 /*# sourceMappingURL=estilo.css.map */

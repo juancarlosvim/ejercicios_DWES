@@ -27,7 +27,7 @@ Partial Class Tienda
         d.cantidad = cantidad
         d.pvp = precio
         d.nombre = nombreProducto
-
+        Response.Write("GUARDANDO DATOS EN EL DICCIONARIO")
         Response.Write("idProducto => " & d.idProducto)
         Response.Write("cantidad => " & d.cantidad)
         Response.Write("Precio => " & d.pvp)

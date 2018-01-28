@@ -7,7 +7,10 @@ Partial Class tienda
     Private Sub tienda_Load(sender As Object, e As EventArgs) Handles Me.Load
         ' hacemos que cargue por defecto las pizzas ya que si no nos muestra por defecto -1
         lvCategorias.SelectedIndex = 0
+<<<<<<< HEAD
         lblTienda.Text = Session("datosTienda")
+=======
+>>>>>>> master
 
 
     End Sub

@@ -12,6 +12,7 @@ header {
   align-items: center;
 }
 
+<<<<<<< HEAD
 header .logo {
   display: flex;
   align-items: center;
@@ -36,18 +37,28 @@ header #menuMovil {
 header .categorias input {
   background-color: #666666;
   color: #FFFFFF;
+=======
+header .categorias input {
+  background-color: #000000;
+  color: #FAAF33;
+>>>>>>> master
   border-radius: 50%;
   padding: 1.2em;
 }
 
 header .categorias input:hover {
   transition: 0.5s;
+<<<<<<< HEAD
   color: #FFFFFF;
   background-color: #FDA228;
 }
 
 header .categorias input:active {
   background-color: #FDA228;
+=======
+  color: #000000;
+  background-color: #FAAF33;
+>>>>>>> master
 }
 
 main {
@@ -57,6 +68,7 @@ main {
 
 section {
   flex: 1 100%;
+<<<<<<< HEAD
   display: flex;
   flex-wrap: wrap;
   min-height: 20em;
@@ -83,10 +95,31 @@ section {
 }
 
 .producto input[type=number] {
+=======
+  background-color: red;
+  /*#lvProductos_groupPlaceholderContainer td{
+        border: 1px solid black;
+    }*/
+}
+
+section .producto {
+  text-align: center;
+  border: 1px dotted black;
+  width: 40%;
+  padding: 1em;
+}
+
+section .producto p {
+  padding: 0.2em;
+}
+
+section .producto input[type=number] {
+>>>>>>> master
   padding: 0.2em;
   width: 20%;
 }
 
+<<<<<<< HEAD
 .producto input[type=submit] {
   padding: 1em;
   border-radius: 50%;
@@ -124,11 +157,21 @@ aside h3 {
   margin: 0.67em;
   color: #FFFFFF;
   text-align: center;
+=======
+section .producto input[type=submit] {
+  padding: 1em;
+  border-radius: 50%;
+}
+
+aside {
+  background-color: yellow;
+>>>>>>> master
 }
 
 footer {
   background-color: #3E454E;
   min-height: 3em;
+<<<<<<< HEAD
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -194,5 +237,13 @@ footer .social a:hover {
     display: flex;
     flex-direction: column;
   }
+=======
+}
+
+footer p {
+  color: #FFFFFF;
+  padding: 1em;
+  line-height: 3em;
+>>>>>>> master
 }
 /*# sourceMappingURL=tienda.css.map */

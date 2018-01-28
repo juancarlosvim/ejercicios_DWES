@@ -5,7 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<<<<<<< HEAD
 <link rel="stylesheet" href="public/font-awesome-4.7.0/css/font-awesome.css"/>
+=======
+>>>>>>> master
 <link rel="stylesheet" href="public/css/estilo.css">
     <title>PizzaNo </title>
 </head>
@@ -23,6 +26,7 @@
         <section>
             <div class="buscarTienda">
                     <asp:Label ID="lblCodigoPostal" runat="server" Text="Introduce un código postal:"></asp:Label>
+<<<<<<< HEAD
                     <asp:TextBox ID="txbCodigoPostal" runat="server"></asp:TextBox>
                     <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
                     
@@ -40,6 +44,13 @@
                             
                              </asp:ListView>
                             
+=======
+                    <asp:TextBox ID="txbCodigoPostal" runat="server" style="margin-left: 24px"></asp:TextBox>
+                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+                    <div class="nombreTienda">
+                            <asp:RadioButtonList ID="rbTiendas" runat="server" AutoPostBack="True" DataSourceID="sqlDsTiendas" DataTextField="valor" DataValueField="idTienda">
+                                </asp:RadioButtonList>
+>>>>>>> master
                     </div>
                    
                     <asp:SqlDataSource ID="sqlDsTiendas" runat="server" ConnectionString="<%$ ConnectionStrings:TelefoodConnectionString %>" SelectCommand="SELECT [idTienda], ([domicilio]+' '+[poblacion]+' '+[provincia]+' '+[cPostal]+' '+[telefono]) as valor FROM [Tiendas] WHERE ([cPostal] = @cPostal) UNION all SELECT [idTienda], ([domicilio]+' '+[poblacion]+' '+[provincia]+' '+[cPostal]+' '+[telefono]) as valor FROM [Tiendas] WHERE ([cPostal] LIKE @cPostal2 + '%') and not ([cPostal] = @cPostal)">
@@ -48,11 +59,15 @@
                             <asp:Parameter Name="cPostal2" Type="String" />
                         </SelectParameters>
                     </asp:SqlDataSource>
+<<<<<<< HEAD
              
+=======
+>>>>>>> master
             </div>
         </section>
     
         <footer>
+<<<<<<< HEAD
                 <div class="derechos">
                         <p>&copy; PizzaNo</p>
                 </div>
@@ -62,6 +77,9 @@
                     <a target="_blank" href="#" title="instagram"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
                 
                 </div>
+=======
+            <p>&copy; PizzaNo</p>
+>>>>>>> master
         </footer>
         
     </form>

@@ -16,6 +16,7 @@ Partial Class inicio
         End If
     End Sub
 
+<<<<<<< HEAD
 
     Protected Sub obtenerRbSeleccionado(sender As Object, e As EventArgs)
         ' 
@@ -29,6 +30,12 @@ Partial Class inicio
         Session("tienda") = idTienda
         Session("datosTienda") = datosTienda
         Session("pedido") = New Dictionary(Of Integer, DetallePedido)
+=======
+    Private Sub rbTiendas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles rbTiendas.SelectedIndexChanged
+        Session("pedido") = New Dictionary(Of Integer, DetallePedido)
+        Session("tienda") = rbTiendas.SelectedValue
+        Session("ubicacion") = rbTiendas.SelectedItem.ToString
+>>>>>>> master
         Response.Redirect("tienda.aspx")
     End Sub
 End Class
