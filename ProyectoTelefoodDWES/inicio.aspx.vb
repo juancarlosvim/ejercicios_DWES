@@ -16,10 +16,19 @@ Partial Class inicio
         End If
     End Sub
 
-    Private Sub rbTiendas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles rbTiendas.SelectedIndexChanged
+
+    Protected Sub obtenerRbSeleccionado(sender As Object, e As EventArgs)
+        ' 
+        Dim rbTienda = CType(sender, RadioButton)
+
+        Dim idTienda = rbTienda.Attributes("value") ' idTienda de la tienda seleccionada
+        Dim datosTienda = rbTienda.Text ' los datos que tiene la tienda
+        'MsgBox("La clave del radioButon: " & idTienda)
+        'Response.Write("La clave del radioButon: " & idTienda)
+        'Response.Write("El texto del radioButon: " & datosTienda)
+        Session("tienda") = idTienda
+        Session("datosTienda") = datosTienda
         Session("pedido") = New Dictionary(Of Integer, DetallePedido)
-        Session("tienda") = rbTiendas.SelectedValue
-        Session("ubicacion") = rbTiendas.SelectedItem.ToString
         Response.Redirect("tienda.aspx")
     End Sub
 End Class

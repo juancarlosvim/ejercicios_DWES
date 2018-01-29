@@ -10,18 +10,39 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .logo{
+       display: flex;
+       align-items: center;
+       h1{
+           color: $color_h3;
+       }
+       p{
+        color: $color_h3;
+       }
+       
+       
+    }
+    #checkMenu{
+        visibility: hidden;
+    }
+    #menuMovil{
+        visibility: hidden;
+    }
     .categorias{
         
         input{
             background-color: $fondo_botones;
-            color: $fondo_header;
+            color: $color_blanco;
             border-radius: 50%; 
             padding: 1.2em;
         }
         input:hover{
             transition: 0.5s;
-            color: $fondo_botones;
-            background-color: $fondo_header;
+            color: $color_blanco;
+            background-color: $fondo_botones_a-hover;
+        }
+        input:active{
+            background-color: $fondo_botones_a-hover;
         }
     }    
 }
@@ -31,40 +52,73 @@ main{
     
 }
 section{
-    flex:  1 100%;
-    background-color: red;
     
-    /*#lvProductos_groupPlaceholderContainer td{
-        border: 1px solid black;
-    }*/
-  
-   .producto{
-      text-align: center;
-       border: 1px dotted black;
-       width: 40%;
-       
-        padding: 1em;
-       
-       p{
-           padding: 0.2em;
-       }
-       
-       
-        input[type=number]{
-           
-            padding: 0.2em;
-            width: 20%;   
-        }
-        input[type=submit]{
-            padding: 1em;
-            border-radius: 50%;
-        }
-   }
-    
-}
-aside{
-    background-color: yellow;
    
+   flex: 1 100%;
+   
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 20em;
+    align-items: normal;
+    justify-content: space-between;
+      
+}
+.producto{
+    border-radius: 50%;
+    margin: 1em;
+   text-align: center;
+   border: 0.3em solid $fondo_header;
+    background-color: $fondo_producto;
+     padding: 1em;
+    
+    p{
+        color: $color_letra;
+        padding: 0.2em;
+    }
+    input[type=image]{
+        width: 50%;
+    }
+   
+     input[type=number]{
+        
+         padding: 0.2em;
+         width: 20%;   
+     }
+     input[type=submit]{
+         padding: 1em;
+         border-radius: 50%;
+         color: $color_blanco;
+         background-color: $fondo_botonesPedir;
+     }
+     input[type=submit]:hover{
+         background-color: $fondo_botones-a_hover;
+     }
+}
+.sinProductos{
+    margin: 1em;
+    padding: 1em;
+    border-radius: 50%;
+    color: $color_letra;
+    background-color: $fondo_producto;
+    padding: 2em;
+    border: 0.3em solid $fondo_header;
+    margin: auto;
+}
+
+aside{
+
+    background-image: url($fondo_imagen_aside);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 20%;
+    i{
+        padding: 0.2em;
+    }
+    h3{
+        margin: 0.67em;
+        color: $color_blanco;
+        text-align: center;
+    }
 }
 
 
@@ -72,11 +126,82 @@ footer{
 
     background-color: $fondo_footer;
     min-height: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5em;
     p{
+        font-size: 1.2em;
         color: $color_blanco;
         padding: 1em;
-        line-height: 3em;
+        
+    }
+    .social{
+        a{
+            padding: 1em;
+            color: $color_blanco;
+        }
+        a:hover{
+            color: $fondo_header;
+        }
     }
     
+    
+}
+
+@media screen and (max-width: $resolucion_movilInicio){
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 25em;
+        .logo{
+            flex-direction: column;
+           
+        }
+        .nombreRestaurante{
+            text-align: center;
+            p{
+                font-size: 1em;;
+            }
+        }
+       
+        #menuMovil{
+            visibility: visible;
+        }
+        #checkMenu:checked ~ .categorias{
+            transform: translateX(0%); 
+            
+           
+        }
+        #checkMenu:checked ~ #menuMovil{
+            &:before{
+            content: "\f00d";
+            }
+        }
+        #checkMenu{
+            display: none;
+        }
+    .categorias{
+        transition: all 0.5s;
+        transform: translateX(200%);
+        width: 100%;
+        background-color: $fondo_header;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        input[type=submit]{
+            width: 50%;
+            margin: auto;
+        }
+    }
+       
+    }
+   
+    
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
     
 }

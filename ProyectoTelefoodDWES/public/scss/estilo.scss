@@ -11,7 +11,12 @@ header{
     background: $fondo_header;
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
+    h1{
+        color: $color_h3;
+        padding: 1em;
+    }
+    
 }
 main{
     display: flex;
@@ -26,25 +31,24 @@ section{
     /* page inicio*/
     .buscarTienda{
        
-        text-align: center;
-        
+        text-align: center;  
     }
-    #rbTiendas{
-        margin-left: auto;
-        margin-right: auto;
-        border: 0.2em dotted black;
-        padding: 1em;     
-    }
-    .tiendas{
-        margin-top: 1em; 
-    }
+   
     .nombreTienda{
         margin: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em;
+        width: 50%;
+        border: 0.2em dotted black;
+        input[type=radio]{
+            margin: 0 0.2em;
+        }
+        p{
+            margin: 0.67em;
+        }
     }
-    .productos{
-        display: flex;
-        flex-wrap: wrap;
-    }
+    
     #btnBuscar{
         width: 10%;
         min-height: 3em;
@@ -58,11 +62,60 @@ footer{
 
     background-color: $fondo_footer;
     min-height: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5em;
     p{
+        font-size: 1.2em;
         color: $color_blanco;
         padding: 1em;
-        line-height: 3em;
+        
+    }
+    .social{
+        a{
+            padding: 1em;
+            color: $color_blanco;
+        }
+        a:hover{
+            color: $fondo_header;
+        }
     }
     
+    
+}
+
+@media screen and (max-width: $resolucion_movilInicio){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+   
+    section{
+       
+         input{
+             margin: 1em;
+         }
+        #btnBuscar{
+            margin-top: 1em;
+            padding: 1em;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 30%;
+             min-height: 1em;
+             border-radius: 30%;
+         }
+         
+         .nombreTienda{
+             font-size: 1em;
+             width: 90%;
+         }
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
     
 }

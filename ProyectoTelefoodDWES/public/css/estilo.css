@@ -13,6 +13,11 @@ header {
   align-items: center;
 }
 
+header h1 {
+  color: #222629;
+  padding: 1em;
+}
+
 main {
   display: flex;
   justify-content: space-between;
@@ -30,24 +35,21 @@ section .buscarTienda {
   text-align: center;
 }
 
-section #rbTiendas {
-  margin-left: auto;
-  margin-right: auto;
-  border: 0.2em dotted black;
-  padding: 1em;
-}
-
-section .tiendas {
-  margin-top: 1em;
-}
-
 section .nombreTienda {
   margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  width: 50%;
+  border: 0.2em dotted black;
 }
 
-section .productos {
-  display: flex;
-  flex-wrap: wrap;
+section .nombreTienda input[type=radio] {
+  margin: 0 0.2em;
+}
+
+section .nombreTienda p {
+  margin: 0.67em;
 }
 
 section #btnBuscar {
@@ -59,11 +61,52 @@ section #btnBuscar {
 footer {
   background-color: #3E454E;
   min-height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 5em;
 }
 
 footer p {
+  font-size: 1.2em;
   color: #FFFFFF;
   padding: 1em;
-  line-height: 3em;
+}
+
+footer .social a {
+  padding: 1em;
+  color: #FFFFFF;
+}
+
+footer .social a:hover {
+  color: #FAAF33;
+}
+
+@media screen and (max-width: 456px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  section input {
+    margin: 1em;
+  }
+  section #btnBuscar {
+    margin-top: 1em;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 30%;
+    min-height: 1em;
+    border-radius: 30%;
+  }
+  section .nombreTienda {
+    font-size: 1em;
+    width: 90%;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
 }
 /*# sourceMappingURL=estilo.css.map */
